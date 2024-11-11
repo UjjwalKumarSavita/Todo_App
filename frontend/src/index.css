@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* preview */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(231 8 220 / 22%);
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to right, #00d1fd9c, #b961d0e0, #f64fcfe8);
+}
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 26px 42px rgba(0, 0, 0, 0.1);
+}
+.taskinput {
+  outline: 0;
+  padding: 4px;
+  background: transparent;
+  border: 1px solid white;
+}
+.todos::-webkit-scrollbar {
+  display: none;
+}
+
+.overflow-anywhere {
+  overflow-wrap: anywhere;
+}
+edtdltbtn {
+  background-color: purple;
+  border-radius: 4px;
+}
+
+.checkbtn input {
+  -webkit-appearance: none;
+  appearance: none;
+  font: inherit;
+
+  width: 1em;
+  height: 1em;
+  border: 0.1em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: flex;
+  align-items: center;
+}
+.checkbtn input:hover{
+    cursor: pointer;
+}
+.showcmpbtn input:hover{
+    cursor: pointer;
+}
+.checkbtn input::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+   background-color: rgba(29, 161, 47, 0.896);
+  transition: 120ms transform ease-in-out;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.checkbtn input:checked::before {
+    transform: scale(1.6);
+  }
+
+  .showcmpbtn input{
+    -webkit-appearance: none;
+    appearance: none;
+    font: inherit;
+    padding: 2.5px;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.1em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: flex;
+    align-items: center;
+  }
+.showcmpbtn input::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    background-color: rgb(4, 174, 46) ;
+}
+.showcmpbtn input:checked::before {
+    transform: scale(1.1);
+  }
+
